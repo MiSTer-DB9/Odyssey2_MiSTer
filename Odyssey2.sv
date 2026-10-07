@@ -365,8 +365,8 @@ wire  [7:0] ioctl_index;
 wire [15:0] joystick_0_USB,joystick_1_USB;
 wire [24:0] ps2_mouse;
 
-wire [15:0] joystick_0 = joydb_1ena ? OSD_STATUS? 16'b0 : joydb_1_mapped[4:0] : joystick_0_USB;
-wire [15:0] joystick_1 = joydb_2ena ? OSD_STATUS? 16'b0 : joydb_2_mapped[4:0] : joydb_1ena ? joystick_0_USB : joystick_1_USB;
+wire [15:0] joystick_0 = joydb_1ena ? OSD_STATUS? 16'b0 : joydb_1_mapped[12:0] : joystick_0_USB;
+wire [15:0] joystick_1 = joydb_2ena ? OSD_STATUS? 16'b0 : joydb_2_mapped[12:0] : joydb_1ena ? joystick_0_USB : joystick_1_USB;
 
 
 
